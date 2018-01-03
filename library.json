@@ -23,8 +23,8 @@
       "frameworks": "arduino"
     },
     {
-      "name": "Adafruit-GFX-Library",
-      "authors": "Neal Horman",
+      "name": "Adafruit GFX Library",
+      "authors": "Adafruit",
       "frameworks": "arduino"
     }
   ],
