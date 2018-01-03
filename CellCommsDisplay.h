@@ -1,22 +1,18 @@
 /**
- * Display functions for CellComms on I2C 128x64 display using AdaFruit driver
- * Currently hard coded for my personal setup of 28 cells
+ * Display functions for CellComms Adafruit_GFX displays
  *
- * This will some major functional components
- * - A class insantiated with display device
- * - Function to display header (yellow on my display)
- * - Function to display per cell bar graph and average
- * - Future: Menu for interaction
- *
- * Header will contain as much information as possible, hopefully at least:
+ * Header contains:
  * - Average cell voltage
- * - Num cells balancing
  * - Cell temperature maximum
  * - Cell with greatest voltage
  * - Cell with lowest voltage
+ * - Number of cells balancing
  *
- * The bar chart will have a vertical bar for every cell, and a horizonal line
- * for the average.
+ * The bar chart has have a vertical bar for every cell showing current voltage,
+ * and a horizonal line for the average voltage.
+ * 
+ * TODO:
+ *  Remove hard coded bar widths for differing cell numbers.
  **/
 
 #pragma once
@@ -25,8 +21,6 @@
 #include "CellComms.h"
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
-// #include <Fonts/FreeMonoBold18pt7b.h>
-// #include <Fonts/FreeMonoOblique9pt7b.h>
 #include <vector>
 
 #define CELLCOMMSDISPLAY_BAR_START           8
