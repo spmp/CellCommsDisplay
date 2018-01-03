@@ -1,18 +1,34 @@
 /**
- * Display functions for CellComms Adafruit_GFX displays
+ * Display functions for CellComms using Adafruid GFX displays.
+ * Currently tailored and tested on I2C 128x64 duo colour OLED display
+ * Currently hard coded for my personal setup of 28 cells
  *
- * Header contains:
+ * Style:
+ *  As this library may be imported by a library manager and used by more
+ *  than one device it is important that all initialisation values can be
+ *  set at class instantiation AND NOT by altering preprocessor directives
+ *
+ * The class initialisation options are as follows:
+ * - Display, the ADAFRUIT_GFX display device
+ * - CellComms, the CellComms object containing the data to display
+ * - topBarProportion, the proportion of the display used for the top bar
+ * - minVoltage, the minimum voltage displayed
+ * - maxVoltage, the maximum voltage displayed
+ *
+ * Header will contains:
  * - Average cell voltage
  * - Cell temperature maximum
  * - Cell with greatest voltage
  * - Cell with lowest voltage
- * - Number of cells balancing
+ * - Num cells balancing
  *
- * The bar chart has have a vertical bar for every cell showing current voltage,
- * and a horizonal line for the average voltage.
- * 
- * TODO:
- *  Remove hard coded bar widths for differing cell numbers.
+ * The bar chart has a vertical bar for every cell, and a horizonal line
+ * for the average.
+ *
+ * TODO
+ * - Remove all project specific hard coded values
+ * - Greater stats view
+ * - Menu
  **/
 
 #pragma once
